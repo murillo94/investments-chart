@@ -22,7 +22,9 @@
     "prettier": "^2.0.5"
   },
   "dependencies": {
+    "imagemin-svgo": "^8.0.0",
     "next": "^9.4.4",
+    "next-optimized-images": "^2.6.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "reakit": "^1.0.4",
