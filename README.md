@@ -36,6 +36,8 @@ todo
 - `yarn install`
 - `yarn dev`
 
+Abra um navegador com a url `http://localhost:3000`
+
 ## url
 
 todo
