@@ -16,14 +16,6 @@ describe('Money', () => {
 
     const p = container.querySelector('p');
 
-    expect(p).toHaveTextContent(content);
-  });
-
-  test('should have prefix R$', () => {
-    const { getByText } = render(<Money>{content}</Money>);
-
-    const money = getByText(`R$ ${content}`);
-
-    expect(money).toBeInTheDocument();
+    expect(p).toHaveTextContent('R$ 1.000,98');
   });
 });

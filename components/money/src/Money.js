@@ -1,6 +1,8 @@
+import { formatMoney } from '../../../utils/money';
+
 export const Money = ({ children }) => (
   <p>
-    R$ {children}
+    {formatMoney(children)}
     <style jsx>
       {`
         font-size: 24px;
