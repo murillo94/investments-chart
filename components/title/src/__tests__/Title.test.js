@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { Title } from '../../index';
+import { Title } from '../Title';
 
 const content = 'im h1';
 

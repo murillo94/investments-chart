@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { Money } from '../../index';
+import { Money } from '../Money';
 
 const content = 1000.98;
 

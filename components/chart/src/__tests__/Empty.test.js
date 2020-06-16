@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { Empty } from '../../index';
+import { Empty } from '../Empty';
 
 const content = 'im h3';
 

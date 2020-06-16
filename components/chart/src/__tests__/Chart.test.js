@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { Chart } from '../../index';
+import { Chart } from '../Chart';
 
 const data = [
   { x: 1565308800000, y: 24960 },
