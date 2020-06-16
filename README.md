@@ -63,16 +63,18 @@ Logo após a conclusão da tela, o resultado final foi disponibilizado no [Dribb
 
 - `$ yarn dev`
 
-4. Optando por um ambiente de produção:
+4. Abra um navegador com a url `http://localhost:3000`
+
+#### Alguns outros comandos
+
+Caso opte por um ambiente de produção ao invés de desenvolvimeto:
 
 - `$ yarn build`
 - `$ yarn start`
 
-5. Rodando os testes:
+Caso queira rodar os testes:
 
 - `$ yarn test`
-
-Abra um navegador com a url `http://localhost:3000`
 
 ## Como contruibuir
 
