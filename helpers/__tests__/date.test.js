@@ -25,8 +25,8 @@ describe('Date', () => {
     });
 
     test('should return unix timestamp', () => {
-      expect(getDateAgo(1)).toBe(1527390000);
-      expect(getDateAgo(3)).toBe(1522119600);
+      expect(getDateAgo(1)).toBe(1527390000000);
+      expect(getDateAgo(3)).toBe(1522119600000);
     });
   });
 });

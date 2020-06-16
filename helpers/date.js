@@ -37,7 +37,7 @@ export const getDateAgo = ago => {
     date.setHours(0, 0, 0);
     date.setMilliseconds(0);
 
-    return (date / 1000) | 0;
+    return ((date / 1000) | 0) * 1000;
   }
 
   return 0;
