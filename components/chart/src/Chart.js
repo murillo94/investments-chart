@@ -54,7 +54,7 @@ export const Chart = ({ data = [] }) => (
           tickFormat={tick => `${roundMoney(tick)}`}
           style={{
             axis: { stroke: '#c9c9c9' },
-            grid: { stroke: '#dedede' },
+            grid: { stroke: '#f1f1f1' },
             tickLabels: { fontSize: 13, padding: 15, fill: '#949494' }
           }}
         />
@@ -65,7 +65,7 @@ export const Chart = ({ data = [] }) => (
           tickFormat={tick => `${formatDate(tick)}`}
           style={{
             axis: { stroke: '#c9c9c9' },
-            grid: { stroke: '#dedede' },
+            grid: { stroke: '#f1f1f1' },
             tickLabels: { fontSize: 13, padding: 15, fill: '#949494' }
           }}
         />
