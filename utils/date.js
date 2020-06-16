@@ -26,3 +26,19 @@ export const formatDate = timestamp => {
 
   return 'Sem data';
 };
+
+export const getDateAgo = ago => {
+  if (isNumber(ago)) {
+    const date = new Date();
+    const month = date.getMonth();
+    date.setMonth(date.getMonth() - ago);
+
+    if (date.getMonth() === month) date.setDate(0);
+    date.setHours(0, 0, 0);
+    date.setMilliseconds(0);
+
+    return (date / 1000) | 0;
+  }
+
+  return 0;
+};
