@@ -1,6 +1,6 @@
 # investments-chart
 
-Uma aplicação para acompanhar o rendimento de seus investimentos através de um gráfico de área. A API base do projeto se encontra nessa [url](https://gist.githubusercontent.com/AgtLucas/a67c345e15c2eb3d4668c9b7e330ac44/raw/1de2450cbe69fde065bca9e498aaaaafcca61257/mock-data.js).
+Uma aplicação para acompanhar o rendimento de seus investimentos através de um gráfico de área. A API base do projeto está na seguinte [url](https://gist.githubusercontent.com/AgtLucas/a67c345e15c2eb3d4668c9b7e330ac44/raw/1de2450cbe69fde065bca9e498aaaaafcca61257/mock-data.js).
 
 ## Modelagem da solução
 
@@ -14,6 +14,7 @@ As seguintes tecnologias são usadas nesse projeto:
 
 - [React](https://github.com/facebook/react)
 - [Reakit](https://reakit.io/docs/get-started/) (Componentes acessíveis [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria/))
+- [Victory](https://formidable.com/open-source/victory/) (Componentes de gráfico]
 - [Testing Library](https://testing-library.com/docs/intro) (React testes)
 - [Jest](https://jestjs.io/) (Javascript testes)
 
@@ -23,17 +24,17 @@ A aplicação tem três tipos de testes: Unidade, Integração e End-to-end. Tod
 
 #### Deploy
 
-A plataforma de Deploy escolhida, foi a [Vercel](https://vercel.com)(Deploy estático e JAMstack, CDN global).
+A plataforma de deploy escolhida, foi a [Vercel](https://vercel.com) (Deploy estático e JAMstack, CDN global).
 
-Para realizar em produção, é necessário que todos os passos do CI sejam checados (corretos), logo após o deploy é iniciado para produção.
+Para realizar deploy em produção, é necessário que todos os passos do CI sejam checados (corretos), logo após o deploy é iniciado para produção.
 
 Durante o período de build, é possível ter uma url de preview das suas alterações. Basta estar entrar na PR e olhar o último comentário.
 
 #### Acessibilidade
 
-A aplicação foi desenhada para ser totalmente acessível aos usuários, a navegação pela aplicação pode ser feita totalmete através do teclado.
+A aplicação foi desenhada para ser totalmente acessível aos usuários, a navegação pela aplicação pode ser feita totalmente através do teclado.
 
-Exemplo: No filtro de períodos é possível a seguinte ação -> <kbd>Tab</kbd> para dar foco no menu + <kbd>↑</kbd> + <kbd>↓</kbd> + <kbd>←</kbd> + <kbd>→</kbd> para navegar entre os itens do menu.
+Exemplo, no filtro de períodos é possível realizar a seguinte ação: <kbd>Tab</kbd> para dar foco no menu e <kbd>↑</kbd> + <kbd>↓</kbd> + <kbd>←</kbd> + <kbd>→</kbd> para navegar entre os itens do menu.
 
 #### UI/UX
 
@@ -75,13 +76,13 @@ Abra um navegador com a url `http://localhost:3000`
 
 ## Como contruibuir
 
-Você pode abrir um Pull-Request e Issues a qualquer momento e todas elas são bem vindas. Algumas ideias talvez seja interessante que você abra uma issue antes de realizar um PR, para que possamos debater sobre a sua ideia e achar a melhor solução.
+Você pode abrir um Pull-Request e Issues a qualquer momento e todas elas são bem vindas. Para algumas ideias talvez seja interessante que você abra uma issue antes de realizar um PR, para que possamos debater sobre a sua ideia e achar a melhor solução.
 
 1. Para rodar localmente,
-   siga os passos da [seção "Usando localmente"](#Usando-localmente).
+   - siga os passos da [seção "Usando localmente"](#Usando-localmente).
 
-2) Para subir um PR, aprenda os passos do guia de contribuição.
-   siga os passos da [seção "Usando localmente"](./CONTRIBUTING.md).
+2) Para subir um PR, aprenda os passos do guia de contribuição
+   - siga os passos da [seção "Usando localmente"](./CONTRIBUTING.md).
 
 ## url
 
