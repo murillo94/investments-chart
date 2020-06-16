@@ -78,11 +78,9 @@ Abra um navegador com a url `http://localhost:3000`
 
 Você pode abrir um Pull-Request e Issues a qualquer momento e todas elas são bem vindas. Para algumas ideias talvez seja interessante que você abra uma issue antes de realizar um PR, para que possamos debater sobre a sua ideia e achar a melhor solução.
 
-1. Para rodar localmente,
-   - siga os passos da [seção "Usando localmente"](#Usando-localmente).
+1. Para rodar localmente, siga os passos da [seção "Usando localmente"](#Usando-localmente)
 
-2) Para subir um PR, aprenda os passos do guia de contribuição
-   - siga os passos da [seção "Usando localmente"](./CONTRIBUTING.md).
+2. Para subir um PR, aprenda os passos do [guia de contribuição](./CONTRIBUTING.md).
 
 ## url
 
