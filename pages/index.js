@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { Title } from '../components/title';
+import { Money } from '../components/money';
 import { Chart } from '../components/chart';
 
 import { formatData } from '../helpers/api';
@@ -27,8 +29,10 @@ const InvestimentsPage = ({ data }) => {
   return (
     <main>
       <header>
-        <div>header 1</div>
-        <div>header 2</div>
+        <div>
+          <Title>Rendimentos</Title>
+          <Money>{investiments.total}</Money>
+        </div>
       </header>
       <section>
         <Chart data={investiments.data} />
