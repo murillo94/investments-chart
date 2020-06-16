@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Title } from '../components/title';
 import { Money } from '../components/money';
 import { Menu, MenuButton, MenuItem, useMenuState } from '../components/menu';
 import { Chart } from '../components/chart';
 
-import { getDateAgo } from '../helpers/date';
 import { formatData } from '../helpers/api';
+import { useLocalStorage } from '../helpers/localStorage';
+import { getDateAgo } from '../helpers/date';
 
 export async function getStaticProps() {
   const res = await fetch(
@@ -31,16 +32,17 @@ const ChevronDown = () => (
 
 const InvestimentsPage = ({ data }) => {
   const menu = useMenuState();
-  const [investiments, setInvestimets] = useState(formatData(data));
+  const [investiments, setInvestimets] = useState([]);
+  const [currentPeriod, setCurrentPeriod] = useLocalStorage('currentPeriod');
 
-  const onClickAllDate = () => {
-    setInvestimets(formatData(data));
-  };
-
-  const onClickFilterDate = ago => {
-    const dateAgo = getDateAgo(ago) * 1000;
+  useEffect(() => {
+    const dateAgo = getDateAgo(currentPeriod);
 
     setInvestimets(formatData(data, dateAgo));
+  }, [currentPeriod]);
+
+  const onClickFilterDate = period => {
+    setCurrentPeriod(period);
   };
 
   return (
@@ -55,7 +57,7 @@ const InvestimentsPage = ({ data }) => {
             Períodos <ChevronDown />
           </MenuButton>
           <Menu ariaLabel="Períodos" {...menu}>
-            <MenuItem onClick={onClickAllDate} {...menu}>
+            <MenuItem onClick={() => onClickFilterDate('')} {...menu}>
               desde o início
             </MenuItem>
             <MenuItem onClick={() => onClickFilterDate(1)} {...menu}>
