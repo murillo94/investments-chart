@@ -36,11 +36,15 @@ export const Chart = ({ data = [] }) => (
         containerComponent={
           <VictoryVoronoiContainer
             labels={({ datum }) =>
-              `${formatDate(datum.x)}
-           ${formatMoney(datum.y)}`
+              `${formatDate(datum.x)}\n${formatMoney(datum.y)}`
             }
             labelComponent={
-              <VictoryTooltip flyoutStyle={{ fill: 'white' }} index={10} />
+              <VictoryTooltip
+                flyoutStyle={{
+                  fill: 'white',
+                  stroke: '#c9c9c9'
+                }}
+              />
             }
           />
         }
