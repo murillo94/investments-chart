@@ -70,9 +70,6 @@ export const Chart = ({ data = [] }) => (
           }}
         />
         <VictoryArea
-          animate={{
-            onLoad: { duration: 800 }
-          }}
           groupComponent={
             <VictoryClipContainer clipPadding={{ top: 5, right: 10 }} />
           }
