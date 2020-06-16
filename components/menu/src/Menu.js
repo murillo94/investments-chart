@@ -46,6 +46,7 @@ export const MenuButton = ({ children, ...menu }) => (
           border-radius: 4px;
           border: 1px solid #3276ff;
           padding: 10px 15px;
+          min-width: 150px;
           display: flex;
           justify-content: center;
           align-items: center;
