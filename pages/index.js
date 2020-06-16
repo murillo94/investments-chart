@@ -26,6 +26,15 @@ export async function getStaticProps() {
   };
 }
 
+const PERIODS = {
+  0: 'desde o início',
+  1: 'último mês',
+  3: '3 meses',
+  6: '6 meses',
+  12: '1 ano',
+  24: '2 anos'
+};
+
 const ChevronDown = () => (
   <img src={require('../public/chevron-down.svg')} alt="Exibir menu" />
 );
@@ -54,10 +63,10 @@ const InvestimentsPage = ({ data }) => {
         </div>
         <div>
           <MenuButton {...menu}>
-            Períodos <ChevronDown />
+            {PERIODS[currentPeriod]} <ChevronDown />
           </MenuButton>
           <Menu ariaLabel="Períodos" {...menu}>
-            <MenuItem onClick={() => onClickFilterDate('')} {...menu}>
+            <MenuItem onClick={() => onClickFilterDate(0)} {...menu}>
               desde o início
             </MenuItem>
             <MenuItem onClick={() => onClickFilterDate(1)} {...menu}>
