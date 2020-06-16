@@ -8,6 +8,15 @@ import { Chart } from '../components/chart';
 import { formatData } from '../helpers/api';
 import { useLocalStorage } from '../helpers/localStorage';
 import { getDateAgo } from '../helpers/date';
+import {
+  PERIODS,
+  FROM_THE_BEGINNING,
+  LAST_MONTH,
+  THREE_MONTH,
+  SIX_MONTH,
+  ONE_YEAR,
+  TWO_YEAR
+} from '../helpers/periods';
 
 export async function getStaticProps() {
   const res = await fetch(
@@ -25,15 +34,6 @@ export async function getStaticProps() {
     }
   };
 }
-
-const PERIODS = {
-  0: 'desde o início',
-  1: 'último mês',
-  3: '3 meses',
-  6: '6 meses',
-  12: '1 ano',
-  24: '2 anos'
-};
 
 const ChevronDown = () => (
   <img src={require('../public/chevron-down.svg')} alt="Exibir menu" />
@@ -66,22 +66,25 @@ const InvestimentsPage = ({ data }) => {
             {PERIODS[currentPeriod]} <ChevronDown />
           </MenuButton>
           <Menu ariaLabel="Períodos" {...menu}>
-            <MenuItem onClick={() => onClickFilterDate(0)} {...menu}>
+            <MenuItem
+              onClick={() => onClickFilterDate(FROM_THE_BEGINNING)}
+              {...menu}
+            >
               desde o início
             </MenuItem>
-            <MenuItem onClick={() => onClickFilterDate(1)} {...menu}>
+            <MenuItem onClick={() => onClickFilterDate(LAST_MONTH)} {...menu}>
               último mês
             </MenuItem>
-            <MenuItem onClick={() => onClickFilterDate(3)} {...menu}>
+            <MenuItem onClick={() => onClickFilterDate(THREE_MONTH)} {...menu}>
               3 meses
             </MenuItem>
-            <MenuItem onClick={() => onClickFilterDate(6)} {...menu}>
+            <MenuItem onClick={() => onClickFilterDate(SIX_MONTH)} {...menu}>
               6 meses
             </MenuItem>
-            <MenuItem onClick={() => onClickFilterDate(12)} {...menu}>
+            <MenuItem onClick={() => onClickFilterDate(ONE_YEAR)} {...menu}>
               1 ano
             </MenuItem>
-            <MenuItem onClick={() => onClickFilterDate(24)} {...menu}>
+            <MenuItem onClick={() => onClickFilterDate(TWO_YEAR)} {...menu}>
               2 anos
             </MenuItem>
           </Menu>
