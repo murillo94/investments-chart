@@ -1,6 +1,6 @@
 import { isNumber } from '../number';
 
-describe('Date', () => {
+describe('Number', () => {
   test('should return false when NaN', () => {
     expect(isNumber('testing string')).toBe(false);
     expect(isNumber(0)).toBe(false);
