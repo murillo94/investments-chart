@@ -11,11 +11,11 @@ describe('Money', () => {
     expect(container).toBeInTheDocument();
   });
 
-  test('should be P with text', () => {
+  test('should be H2 with text', () => {
     const { container } = render(<Money>{content}</Money>);
 
-    const p = container.querySelector('p');
+    const h2 = container.querySelector('h2');
 
-    expect(p).toHaveTextContent('R$ 1.000,98');
+    expect(h2).toHaveTextContent('R$ 1.000,98');
   });
 });

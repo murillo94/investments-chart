@@ -1,7 +1,7 @@
 import { formatMoney } from '../../../utils/money';
 
 export const Money = ({ children }) => (
-  <p>
+  <h2>
     {formatMoney(children)}
     <style jsx>
       {`
@@ -11,5 +11,5 @@ export const Money = ({ children }) => (
         margin: 0 0 5px;
       `}
     </style>
-  </p>
+  </h2>
 );
