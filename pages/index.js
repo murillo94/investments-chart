@@ -2,8 +2,10 @@ import { useState } from 'react';
 
 import { Title } from '../components/title';
 import { Money } from '../components/money';
+import { Menu, MenuButton, MenuItem, useMenuState } from '../components/menu';
 import { Chart } from '../components/chart';
 
+import { getDateAgo } from '../helpers/date';
 import { formatData } from '../helpers/api';
 
 export async function getStaticProps() {
@@ -24,7 +26,18 @@ export async function getStaticProps() {
 }
 
 const InvestimentsPage = ({ data }) => {
-  const [investiments] = useState(formatData(data));
+  const menu = useMenuState();
+  const [investiments, setInvestimets] = useState(formatData(data));
+
+  const onClickAllDate = () => {
+    setInvestimets(formatData(data));
+  };
+
+  const onClickFilterDate = ago => {
+    const dateAgo = getDateAgo(ago) * 1000;
+
+    setInvestimets(formatData(data, dateAgo));
+  };
 
   return (
     <main>
@@ -32,6 +45,29 @@ const InvestimentsPage = ({ data }) => {
         <div>
           <Title>Rendimentos</Title>
           <Money>{investiments.total}</Money>
+        </div>
+        <div>
+          <MenuButton {...menu}>Períodos</MenuButton>
+          <Menu ariaLabel="Períodos" {...menu}>
+            <MenuItem onClick={onClickAllDate} {...menu}>
+              desde o início
+            </MenuItem>
+            <MenuItem onClick={() => onClickFilterDate(1)} {...menu}>
+              último mês
+            </MenuItem>
+            <MenuItem onClick={() => onClickFilterDate(3)} {...menu}>
+              3 meses
+            </MenuItem>
+            <MenuItem onClick={() => onClickFilterDate(6)} {...menu}>
+              6 meses
+            </MenuItem>
+            <MenuItem onClick={() => onClickFilterDate(12)} {...menu}>
+              1 ano
+            </MenuItem>
+            <MenuItem onClick={() => onClickFilterDate(24)} {...menu}>
+              2 anos
+            </MenuItem>
+          </Menu>
         </div>
       </header>
       <section>
