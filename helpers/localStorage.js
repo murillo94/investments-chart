@@ -4,7 +4,7 @@ const setStorage = (key, value) => window.localStorage.setItem(key, value);
 
 const getStorage = key => window.localStorage.getItem(key);
 
-export const useLocalStorage = (key, defaultValue = '') => {
+export const useLocalStorage = (key, defaultValue = 0) => {
   const [value, setValue] = useState(defaultValue);
 
   useEffect(() => {
