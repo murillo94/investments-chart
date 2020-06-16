@@ -1,4 +1,4 @@
-import { formatMoney } from '../../../utils/money';
+import { formatMoney } from '../../../helpers/money';
 
 export const Money = ({ children }) => (
   <h2>

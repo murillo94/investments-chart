@@ -7,8 +7,8 @@ import {
   VictoryAxis
 } from 'victory';
 
-import { roundMoney, formatMoney } from '../../../utils/money';
-import { formatDate } from '../../../utils/date';
+import { roundMoney, formatMoney } from '../../../helpers/money';
+import { formatDate } from '../../../helpers/date';
 
 const Empty = ({ children }) => (
   <h3>
