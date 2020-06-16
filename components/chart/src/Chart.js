@@ -7,10 +7,25 @@ import {
   VictoryAxis
 } from 'victory';
 
-import { Empty } from './Empty';
-
 import { roundMoney, formatMoney } from '../../../utils/money';
 import { formatDate } from '../../../utils/date';
+
+const Empty = ({ children }) => (
+  <h3>
+    {children}
+
+    <style jsx>
+      {`
+         {
+          font-size: 26px;
+          color: #949494;
+          text-align: center;
+          margin: 100px auto;
+        }
+      `}
+    </style>
+  </h3>
+);
 
 export const Chart = ({ data = [] }) => (
   <>
