@@ -25,6 +25,10 @@ export async function getStaticProps() {
   };
 }
 
+const ChevronDown = () => (
+  <img src={require('../public/chevron-down.svg')} alt="Exibir menu" />
+);
+
 const InvestimentsPage = ({ data }) => {
   const menu = useMenuState();
   const [investiments, setInvestimets] = useState(formatData(data));
@@ -47,7 +51,9 @@ const InvestimentsPage = ({ data }) => {
           <Money>{investiments.total}</Money>
         </div>
         <div>
-          <MenuButton {...menu}>Períodos</MenuButton>
+          <MenuButton {...menu}>
+            Períodos <ChevronDown />
+          </MenuButton>
           <Menu ariaLabel="Períodos" {...menu}>
             <MenuItem onClick={onClickAllDate} {...menu}>
               desde o início

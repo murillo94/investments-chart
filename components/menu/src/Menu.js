@@ -16,6 +16,7 @@ export const Menu = ({ children, ariaLabel, ...menu }) => {
             border: 1px solid #e3e3e3;
             border-radius: 4px;
             margin-top: 5px;
+            min-width: 140px;
             display: flex;
             flex-direction: column;
             z-index: 1;
@@ -44,9 +45,16 @@ export const MenuButton = ({ children, ...menu }) => (
           color: #fff;
           border-radius: 4px;
           border: 1px solid #0055ff;
-          padding: 12px 15px;
+          padding: 10px 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           cursor: pointer;
           outline: 0;
+        }
+
+        :global(button[aria-haspopup='menu'] img) {
+          margin-left: 5px;
         }
 
         :global(button[aria-haspopup='menu'][aria-expanded='true']),
@@ -82,7 +90,7 @@ export const MenuItem = ({ children, onClick, ...menu }) => (
           border: none;
           border-radius: 0;
           padding: 10px;
-          margin: 3px 0;
+          margin: 2px 0;
           cursor: pointer;
           outline: 0;
         }
