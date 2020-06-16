@@ -41,10 +41,10 @@ export const MenuButton = ({ children, ...menu }) => (
         :global(button[aria-haspopup='menu']) {
           font-size: 14px;
           font-weight: 600;
-          background-color: #0055ff;
+          background-color: #3276ff;
           color: #fff;
           border-radius: 4px;
-          border: 1px solid #0055ff;
+          border: 1px solid #3276ff;
           padding: 10px 15px;
           display: flex;
           justify-content: center;
@@ -96,12 +96,12 @@ export const MenuItem = ({ children, onClick, ...menu }) => (
         }
 
         :global(button[role='menuitem']):focus {
-          background-color: #0055ff;
+          background-color: #3276ff;
           color: #fff;
         }
 
         :global(button[role='menuitem']):hover {
-          background-color: #d8d8d8;
+          background-color: #e9e9e9;
           color: #333;
         }
       `}

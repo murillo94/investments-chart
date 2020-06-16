@@ -39,10 +39,32 @@ export const Chart = ({ data = [] }) => (
               `${formatDate(datum.x)}
            ${formatMoney(datum.y)}`
             }
-            labelComponent={<VictoryTooltip flyoutStyle={{ fill: 'white' }} />}
+            labelComponent={
+              <VictoryTooltip flyoutStyle={{ fill: 'white' }} index={10} />
+            }
           />
         }
       >
+        <VictoryAxis
+          dependentAxis
+          tickFormat={tick => `${roundMoney(tick)}`}
+          style={{
+            axis: { stroke: '#c9c9c9' },
+            grid: { stroke: '#dedede' },
+            tickLabels: { fontSize: 13, padding: 15, fill: '#949494' }
+          }}
+        />
+        <VictoryAxis
+          index={0}
+          tickCount={2}
+          tickValues={[data[0].x, data[data.length - 1].x]}
+          tickFormat={tick => `${formatDate(tick)}`}
+          style={{
+            axis: { stroke: '#c9c9c9' },
+            grid: { stroke: '#dedede' },
+            tickLabels: { fontSize: 13, padding: 15, fill: '#949494' }
+          }}
+        />
         <VictoryArea
           animate={{
             onLoad: { duration: 800 }
@@ -52,19 +74,14 @@ export const Chart = ({ data = [] }) => (
           }
           style={{
             data: {
-              fill: '#91b1f2',
-              stroke: '#0055ff',
+              stroke: '#3276ff',
               strokeWidth: 5,
-              strokeLinecap: 'round'
+              strokeLinecap: 'round',
+              fill: '#3276ff',
+              fillOpacity: 0.3
             }
           }}
           data={data}
-        />
-        <VictoryAxis dependentAxis tickFormat={tick => `${roundMoney(tick)}`} />
-        <VictoryAxis
-          tickCount={2}
-          tickValues={[data[0].x, data[data.length - 1].x]}
-          tickFormat={tick => `${formatDate(tick)}`}
         />
       </VictoryChart>
     )}
