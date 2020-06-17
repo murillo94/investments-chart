@@ -12,7 +12,7 @@ As seguintes tecnologias são usadas nesse projeto:
 
 #### Front End
 
-- [React](https://github.com/facebook/react)
+- [React](https://reactjs.org/)
 - [Reakit](https://reakit.io/docs/get-started/) (Componentes acessíveis [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria/))
 - [Victory](https://formidable.com/open-source/victory/) (Componentes de gráfico]
 - [Testing Library](https://testing-library.com/docs/intro) (React testes)

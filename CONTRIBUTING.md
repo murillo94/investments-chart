@@ -1,4 +1,4 @@
-# 🎉 Obrigado por tirar um tempo para contribuir com o projeto 🎉
+# Obrigado por tirar um tempo para contribuir com o projeto 🎉
 
 Apreciamos o seu tempo para nos ajudar.
 
@@ -11,6 +11,6 @@ Apreciamos o seu tempo para nos ajudar.
 
 ## Submita a PR quando você estiver pronto
 
-Finally submit a PR with your new test case.
+Depois de tudo, quando estiver pronto envie a sua PR.
 
 ## Celebre! 🎉
