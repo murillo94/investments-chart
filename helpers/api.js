@@ -5,7 +5,8 @@ const formatValues = values => ({
   data: values.data,
   total: formatMoney(values.total),
   profit: formatMoney(values.profit),
-  profitPercentage: formatPercentage(values.profitPercentage)
+  profitPercentage: formatPercentage(values.profitPercentage),
+  profitStatus: Math.sign(values.profitPercentage) >= 0
 });
 
 export const formatData = (data, dateAgo = 0) => {

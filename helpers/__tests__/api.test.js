@@ -25,6 +25,7 @@ describe('Api', () => {
       data,
       profit: 'R$ 6,55',
       profitPercentage: '0,03 %',
+      profitStatus: true,
       total: 'R$ 24.966,55'
     });
   });
@@ -34,6 +35,7 @@ describe('Api', () => {
       data: [data[1], data[2], data[3]],
       profit: 'R$ 6,55',
       profitPercentage: '0,03 %',
+      profitStatus: true,
       total: 'R$ 24.966,55'
     });
   });

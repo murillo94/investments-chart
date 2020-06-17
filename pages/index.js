@@ -60,8 +60,10 @@ const InvestimentsPage = ({ data }) => {
         <div>
           <Title>Rendimentos</Title>
           <SubTitle>Acumulado: {investiments.total}</SubTitle>
-          <SubTitle>Ganho: {investiments.profit}</SubTitle>
-          <SubTitle>{investiments.profitPercentage}</SubTitle>
+          <SubTitle>
+            Ganho: {investiments.profit}
+            <span> ({investiments.profitPercentage}) </span>
+          </SubTitle>
         </div>
         <div>
           <MenuButton {...menu}>
@@ -111,6 +113,11 @@ const InvestimentsPage = ({ data }) => {
 
           section {
             margin-top: 50px;
+          }
+
+          span {
+            color: ${investiments.profitStatus ? 'green' : 'red'};
+            margin-left: 5px;
           }
 
           @media (max-width: 600px) {
