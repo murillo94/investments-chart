@@ -17,9 +17,9 @@ export const formatDate = timestamp => {
       'Nov',
       'Dez'
     ];
-    const year = unixTimestamp.getFullYear();
-    const month = months[unixTimestamp.getMonth()];
-    const date = unixTimestamp.getDate();
+    const year = unixTimestamp.getUTCFullYear();
+    const month = months[unixTimestamp.getUTCMonth()];
+    const date = unixTimestamp.getUTCDate();
 
     return `${date} ${month} ${year}`;
   }

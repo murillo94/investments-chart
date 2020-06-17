@@ -11,7 +11,7 @@ describe('Date', () => {
     });
 
     test('should return date', () => {
-      expect(formatDate(1565308800000)).toBe('8 Ago 2019');
+      expect(formatDate(1565308800000)).toBe('9 Ago 2019');
     });
   });
 

@@ -3,12 +3,15 @@ import { isNumber } from './number';
 export const parseMoney = (value, minimumFractionDigits = 2) =>
   isNumber(value) ? parseFloat(value).toFixed(minimumFractionDigits) : 0;
 
-export const formatMoney = (value, minimumFractionDigits = 2) =>
-  isNumber(value)
-    ? `R$ ${Number(parseMoney(value)).toLocaleString('pt-br', {
-        minimumFractionDigits
-      })}`
-    : 'R$ 0,00';
+export const formatMoney = value => {
+  if (isNumber(value)) {
+    const number = value.toFixed(2).split('.');
+    number[0] = `R$ ${number[0].split(/(?=(?:...)*$)/).join('.')}`;
+    return number.join(',');
+  }
+
+  return 'R$ 0,00';
+};
 
 export const roundMoney = value => {
   if (isNumber(value)) {

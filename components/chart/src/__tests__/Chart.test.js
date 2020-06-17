@@ -27,7 +27,7 @@ describe('Chart', () => {
     expect(getByText('10 k')).toBeInTheDocument();
     expect(getByText('15 k')).toBeInTheDocument();
     expect(getByText('20 k')).toBeInTheDocument();
-    expect(getByText('8 Ago 2019')).toBeInTheDocument();
-    expect(getByText('11 Ago 2019')).toBeInTheDocument();
+    expect(getByText('9 Ago 2019')).toBeInTheDocument();
+    expect(getByText('12 Ago 2019')).toBeInTheDocument();
   });
 });
