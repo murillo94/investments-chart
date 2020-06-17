@@ -23,14 +23,18 @@ describe('Api', () => {
   test('should return all data without date ago', () => {
     expect(formatData(data)).toEqual({
       data,
-      total: 99849.83
+      profit: 'R$ 6,55',
+      profitPercentage: '0,03 %',
+      total: 'R$ 24.966,55'
     });
   });
 
   test('should return filtered list with date ago', () => {
     expect(formatData(data, 1565568000000)).toEqual({
       data: [data[1], data[2], data[3]],
-      total: 74889.83
+      profit: 'R$ 6,55',
+      profitPercentage: '0,03 %',
+      total: 'R$ 24.966,55'
     });
   });
 });
