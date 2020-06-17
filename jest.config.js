@@ -4,5 +4,8 @@ module.exports = {
   collectCoverageFrom: ['**/*.{js,jsx}'],
   transform: {
     '^.+\\.js$': 'babel-jest'
+  },
+  moduleNameMapper: {
+    '.+\\.(svg)$': 'jest-transform-stub'
   }
 };
