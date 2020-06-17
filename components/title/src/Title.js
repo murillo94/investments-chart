@@ -4,10 +4,11 @@ export const Title = ({ children }) => (
 
     <style jsx>
       {`
-        font-size: 16px;
-        color: #949494;
+        font-size: 20px;
+        font-weight: 800;
+        color: #333;
         text-transform: uppercase;
-        margin: 0 0 5px;
+        margin: 0 0 10px;
       `}
     </style>
   </h1>
