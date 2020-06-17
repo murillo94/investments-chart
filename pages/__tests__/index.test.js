@@ -30,7 +30,7 @@ describe('App', () => {
     expect(getByText('Rendimentos')).toBeInTheDocument();
     expect(getByText('Acumulado: R$ 114.956,80')).toBeInTheDocument();
     expect(getByText('Ganho: R$ 89.996,80')).toBeInTheDocument();
-    expect(getByText('(78,29 %)')).toHaveStyle('color: green');
+    expect(getByText('(78,29 %)')).toHaveStyle('color: #4ca64c');
   });
 
   test('should have menu click and showing data graph', () => {

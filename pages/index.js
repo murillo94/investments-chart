@@ -116,7 +116,7 @@ const InvestimentsPage = ({ data = [] }) => {
           }
 
           span {
-            color: ${investiments.profitStatus ? 'green' : 'red'};
+            color: ${investiments.profitStatus ? '#4ca64c' : '#ff4c4c'};
             margin-left: 5px;
           }
 
