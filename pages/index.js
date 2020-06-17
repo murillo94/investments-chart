@@ -110,6 +110,22 @@ const InvestimentsPage = ({ data }) => {
           section {
             margin-top: 50px;
           }
+
+          @media (max-width: 600px) {
+            main {
+              margin: 60px auto;
+              width: 100%;
+            }
+
+            header {
+              text-align: center;
+              flex-direction: column;
+            }
+
+            header div:first-child {
+              margin: 0 0 30px;
+            }
+          }
         `}
       </style>
     </main>
