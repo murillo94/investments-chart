@@ -16,8 +16,6 @@ describe('Date', () => {
   });
 
   describe('getDateAgo', () => {
-    advanceTo(new Date(Date.UTC(2018, 5, 27, 0, 0, 0)));
-
     test('should return default value when date is not number', () => {
       expect(getDateAgo('testing string')).toBe(0);
       expect(getDateAgo(null)).toBe(0);
@@ -25,6 +23,8 @@ describe('Date', () => {
     });
 
     test('should return unix timestamp', () => {
+      advanceTo(Date.UTC(2018, 5, 27, 0, 0, 0));
+
       expect(getDateAgo(1)).toBe(1527303600000);
       expect(getDateAgo(3)).toBe(1522033200000);
     });
