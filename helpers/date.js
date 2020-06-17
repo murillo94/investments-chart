@@ -29,8 +29,7 @@ export const formatDate = timestamp => {
 
 export const getDateAgo = ago => {
   if (isNumber(ago)) {
-    const date = new Date();
-
+    const date = new Date(new Date().toUTCString().substr(0, 25));
     const month = date.getUTCMonth();
     date.setMonth(date.getUTCMonth() - ago);
 
