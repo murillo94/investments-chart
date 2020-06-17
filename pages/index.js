@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import { Title } from '../components/title';
-import { Money } from '../components/money';
+import { SubTitle } from '../components/subTitle';
 import { Menu, MenuButton, MenuItem, useMenuState } from '../components/menu';
 import { Chart } from '../components/chart';
 
@@ -59,7 +59,9 @@ const InvestimentsPage = ({ data }) => {
       <header>
         <div>
           <Title>Rendimentos</Title>
-          <Money>{investiments.total}</Money>
+          <SubTitle>Acumulado: {investiments.total}</SubTitle>
+          <SubTitle>Ganho: {investiments.profit}</SubTitle>
+          <SubTitle>{investiments.profitPercentage}</SubTitle>
         </div>
         <div>
           <MenuButton {...menu}>
@@ -97,7 +99,7 @@ const InvestimentsPage = ({ data }) => {
       <style jsx>
         {`
           main {
-            margin: 100px auto;
+            margin: 60px auto;
             width: 600px;
           }
 
