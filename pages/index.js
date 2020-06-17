@@ -101,7 +101,7 @@ const InvestimentsPage = ({ data }) => {
       <style jsx>
         {`
           main {
-            margin: 60px auto;
+            margin: 85px auto;
             width: 600px;
           }
 
