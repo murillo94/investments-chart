@@ -23,10 +23,10 @@ describe('Date', () => {
     });
 
     test('should return unix timestamp', () => {
-      MockDate.set(new Date(2018, 5, 27));
+      MockDate.set(new Date(Date.UTC(2018, 5, 27, 0, 0, 0)));
 
-      expect(getDateAgo(1)).toBe(1527390000000);
-      expect(getDateAgo(3)).toBe(1522119600000);
+      expect(new Date(getDateAgo(1)).getUTCMonth()).toBe(4);
+      expect(new Date(getDateAgo(3)).getUTCMonth()).toBe(2);
     });
   });
 });
