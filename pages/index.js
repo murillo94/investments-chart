@@ -39,7 +39,7 @@ const ChevronDown = () => (
   <img src={require('../public/chevron-down.svg')} alt="Exibir menu" />
 );
 
-const InvestimentsPage = ({ data }) => {
+const InvestimentsPage = ({ data = [] }) => {
   const menu = useMenuState();
   const [investiments, setInvestimets] = useState([]);
   const [currentPeriod, setCurrentPeriod] = useLocalStorage('currentPeriod');
