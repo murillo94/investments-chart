@@ -1,4 +1,4 @@
-import { advanceTo } from 'jest-date-mock';
+import MockDate from 'mockdate';
 
 import { formatDate, getDateAgo } from '../date';
 
@@ -23,10 +23,10 @@ describe('Date', () => {
     });
 
     test('should return unix timestamp', () => {
-      advanceTo(Date.UTC(2018, 5, 27, 0, 0, 0));
+      MockDate.set(new Date(2018, 5, 27));
 
-      expect(getDateAgo(1)).toBe(1527303600000);
-      expect(getDateAgo(3)).toBe(1522033200000);
+      expect(getDateAgo(1)).toBe(1527390000000);
+      expect(getDateAgo(3)).toBe(1522119600000);
     });
   });
 });
