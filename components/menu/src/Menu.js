@@ -16,7 +16,7 @@ export const Menu = ({ children, ariaLabel, ...menu }) => {
             border: 1px solid #e3e3e3;
             border-radius: 4px;
             margin-top: 5px;
-            min-width: 140px;
+            min-width: 150px;
             display: flex;
             flex-direction: column;
             z-index: 1;
